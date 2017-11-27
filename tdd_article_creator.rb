@@ -5,7 +5,7 @@ class ArticleCreator
 
   def call(article_params)
     placeholder_template = @adapter.fetch_article_template
-    article = Article.new(article_params)
+    article = Article.build(article_params, placeholder_template)
 
     if valid?(article)
       article.save
@@ -17,6 +17,6 @@ class ArticleCreator
   private
 
     def valid?
-      # Very ugly Regex pattern matching
+      # ... some complex validation
     end
 end

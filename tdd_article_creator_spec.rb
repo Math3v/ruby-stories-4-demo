@@ -9,7 +9,7 @@ class RemoteServerAdapterMock
 end
 
 desribe "ArticleCreator" do
-  describe "RemoteServer" do
+  context "RemoteServer" do
 
     before do
       adapter_mock = RemoteServerAdapterMock.new
